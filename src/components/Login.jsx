@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLogin } from "../contexts/useLogin";
 
-export default function FormLogin() {
+export default function Login() {
   const navigate = useNavigate();
-  const { setLogin } = setLogin();
+  const { setLogin } = useLogin();
 
   const [senha, setSenha] = useState("");
+
 
   return (
     <div className="container">
