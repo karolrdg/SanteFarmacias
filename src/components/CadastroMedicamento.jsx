@@ -18,14 +18,15 @@ export default function CadastroMedicamento() {
     alert(`Medicação cadastrada com sucesso!`);
   }
   return (
-    <div className="container">
+    <div className="container" id="border">
       <div className="row justify-content-center mt-2 pt-5">
         <form
           autoComplete="off"
           className="row g-3 p-4"
           onSubmit={armazenaMedicamento}
+          style={{ backgroundColor: "#EBF2FF" }}
         >
-          <h4>Cadastro Medicamento:</h4>
+          <h4>Cadastro Medicamento</h4>
           <fieldset className="col-md-6">
             <label htmlFor="inputMedicamento" className="form-label">
               Medicamento
@@ -35,7 +36,7 @@ export default function CadastroMedicamento() {
               type="text"
               className="form-control"
               id="inputMedicamento"
-              placeholder="Informe o nome do medicamento"
+              placeholder="Nome do medicamento"
               required
               onChange={(e) =>
                 setMedicamento({ ...medicamento, medicamento: e.target.value })
@@ -51,7 +52,7 @@ export default function CadastroMedicamento() {
               type="text"
               className="form-control"
               id="inputLaboratorio"
-              placeholder="Informe o laboratório"
+              placeholder="Nome do laboratório"
               required
               onChange={(e) =>
                 setMedicamento({ ...medicamento, laboratorio: e.target.value })
@@ -67,7 +68,7 @@ export default function CadastroMedicamento() {
               type="text"
               className="form-control"
               id="inputDosagem"
-              placeholder="Informe a dosagem"
+              placeholder="Dosagem do medicamento"
               required
               onChange={(e) =>
                 setMedicamento({ ...medicamento, dosagem: e.target.value })
@@ -76,22 +77,22 @@ export default function CadastroMedicamento() {
           </fieldset>
           <fieldset className="col-md-4">
             <label htmlFor="inputPreco" className="form-label">
-              Preço unitário
+              Preço
             </label>
             <input
               value={medicamento.preco || ""}
               type="text"
               className="form-control"
               id="inputPreco"
-              placeholder="Informe o preço unitário"
+              placeholder="Preço unitário"
               required
               onChange={(e) =>
                 setMedicamento({ ...medicamento, preco: e.target.value })
               }
             />
           </fieldset>
-          <fieldset className="col-md-4">
-            <label htmlFor="inputTipo" className="form-label">
+          <fieldset className="col-md-4" >
+            <label htmlFor="inputTipo" className="form-label" >
               Tipo de medicamento
             </label>
             <select
@@ -110,8 +111,8 @@ export default function CadastroMedicamento() {
               <option value="Medicamento comum">Medicamento comum</option>
             </select>
           </fieldset>
-          <fieldset className="col-md-12">
-            <label htmlFor="inputDescricao" className="form-label">
+          <fieldset className="col-md-12" >
+            <label htmlFor="inputDescricao" className="form-label" >
               Descrição
             </label>
             <textarea
@@ -149,6 +150,7 @@ export default function CadastroMedicamento() {
               style={{ backgroundColor: "#014B7B" }}
             />
           </div>
+          
         </form>
       </div>
     </div>

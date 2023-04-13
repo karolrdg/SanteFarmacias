@@ -1,13 +1,13 @@
 import { createContext, useContext, useState } from "react";
 const DadosFarmaciaContext = createContext();
 const DadosFarmaciaProvider = ({ children }) => {
-  
+
   const [cepInformado, setCepInformado] = useState("");
+ 
   const [latLng, setLatLng] = useState({
     latitude: "",
     longitude: "",
   });
-  
   return (
     <DadosFarmaciaContext.Provider
       value={{

@@ -6,6 +6,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
+
 a {
   cursor: pointer;
 }
@@ -49,7 +50,7 @@ a {
 }
 
 .container form {
-  box-shadow: 0px 4px 15px rgb(0 0 0 / 20%);
+  box-shadow: 0px 4px 15px rgb(0 0 0 / 21%);
 }
 
 .btn-list-med {
@@ -64,4 +65,34 @@ a {
 
 .btn-list-med:hover {
   transform: scale(1.1);
+}
+
+#esqueceu-senha a {
+ text-decoration: none;
+ color: #014B7B;
+ font-size: .9rem;
+ font-weight: bold;
+ transition: 0.30s;
+}
+
+#esqueceu-senha a:hover {
+  opacity: 0.7;
+}
+
+#senha{
+  line-height: 12px;
+font-size: .9rem;
+  color: #014B7B;
+}
+
+#span {
+  line-height: 40px;
+}
+
+H4 {
+  color: #014B7B;
+}
+
+input {
+  border: none;
 }

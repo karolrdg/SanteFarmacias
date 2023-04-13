@@ -1,9 +1,11 @@
 import Login from "../components/Login";
 import HeaderNav from "../components/HeaderNav";
-export default function Login() {
+import BuscaDados from "../components/BuscaMedicamentoFarmacia";
+export default function LoginPage() {
   
   return (
     <>
+    <BuscaDados/>
     <HeaderNav/>
     <Login />
     </>

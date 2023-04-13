@@ -21,7 +21,7 @@ export default function HeaderNav() {
             height="44"
             className="d-inline-block align-text-center"
           />
-          <b id="space">SANTÉ FARMÁCIAS</b>
+          <b id="space">SANTÉ FARMA</b>
         </NavLink>
         <button
           className="navbar-toggler"
@@ -43,6 +43,7 @@ export default function HeaderNav() {
                   type="button"
                   to={"/cadastra-farmacia"}
                   activeclassname="active-link"
+                  id="nav-list"
                 >
                   Cadastro de Novas Farmácias
                 </NavLink>
@@ -53,6 +54,7 @@ export default function HeaderNav() {
                   type="button"
                   to={"/cadastra-medicamento"}
                   activeclassname="active-link"
+                  id="nav-list"
                 >
                   Cadastro de Medicamentos
                 </NavLink>
@@ -63,6 +65,7 @@ export default function HeaderNav() {
                   type="button"
                   to={"/lista-medicamentos"}
                   activeclassname="active-link"
+                  id="nav-list"
                 >
                   Lista de Medicamentos
                 </NavLink>
@@ -73,6 +76,7 @@ export default function HeaderNav() {
                   type="button"
                   to={"/ajuda"}
                   activeclassname="active-link"
+                  id="nav-list"
                 >
                   Ajuda
                 </NavLink>
@@ -83,6 +87,7 @@ export default function HeaderNav() {
                   type="button"
                   to={"/mapa"}
                   activeclassname="active-link"
+                  id="nav-list"
                 >
                    Mapa
                 </NavLink>

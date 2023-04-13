@@ -40,7 +40,7 @@ export default function CadastroFarmacia({
       className="container"
       onLoad={() => document.getElementById("reset").click()}
     >
-      <div className="row justify-content-center">
+      <div className="row justify-content-center" id="border">
         <form
           autoComplete="off"
           className="row g-3 mt-5 ps-4 pe-4 pt-5"
@@ -48,8 +48,9 @@ export default function CadastroFarmacia({
             e.preventDefault();
             armazenaFarmacia();
           }}
+          style={{ backgroundColor: "#EEF4FF" }}
         >
-          <h4>Cadastro Farmácia:</h4>
+          <h4>Cadastro Farmácia</h4>
           <fieldset className="col-md-6 col-lg-4">
             <label htmlFor="inputRazaoSocial" className="form-label">
               Razão Social

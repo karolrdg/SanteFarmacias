@@ -18,6 +18,8 @@ export default function CardMedicamento({
             className="card-body"
             data-bs-toggle="modal"
             data-bs-target={`#a${novoId.substring(2, 13)}`}
+            style={{ backgroundColor: "#EEF4FF" }}
+            
           >
             <h5 className="card-title">{medicamento}</h5>
             <h6 className="card-subtitle mb-2 text-muted">{dosagem}</h6>

@@ -8,22 +8,21 @@ export default function Login() {
 
   const [senha, setSenha] = useState("");
 
-
   return (
     <div className="container">
       <div className="row justify-content-center align-items-center vh-100">
         <form
           autoComplete="off"
-          className="col-lg-5 col-md-8 p-4 rounded-3"
+          className="col-lg-4 col-md-8 p-4 rounded-3"
           onSubmit={(e) => {
             e.preventDefault();
             setLogin(true);
             navigate("/mapa");
           }}
-          style={{ backgroundColor: "#DCE8FF" }}
+          style={{ backgroundColor: "#EEF4FF" }}
         >
           <div className="mb-3">
-            <h5>Faça o Login para acessar o site:</h5>
+            <h5>Faça o Login para acessar o site</h5>
           </div>
           <fieldset className="mb-3" id="border">
             <label htmlFor="inputEmail" className="form-label">
@@ -51,20 +50,34 @@ export default function Login() {
               onChange={(e) => setSenha(e.target.value)}
             />
           </fieldset>
-          <fieldset className="mb-3">
-            <span>
-              <b>Sua senha deve conter pelo menos:</b>
+
+          <fieldset className="mb-2" id="senha">
+            <span id="span">
+              <b>Sua senha deve conter:</b>
             </span>
             <br />
-            <p>{senha.length >= 8 ? "✔️" : "❌"}8 caracteres</p>
-            <p>{senha.search(/[a-z]/) !== -1 ? "✔️" : "❌"}1 letra</p>
-            <p>{senha.search(/[0-9]/) !== -1 ? "✔️" : "❌"}1 número</p>
+            <p>{senha.length >= 12 ? "✔️" : ""}Pelo menos 8 caracteres</p>
+
+            <p>
+              {senha.search(/[0-9]/) !== -1 ? "✔️" : ""}Pelo menos um número
+            </p>
+
+            <p>
+              {senha.search(/[A-Z]/) !== -1 ? "✔️" : ""}Pelo menos uma letra
+              maiúscula
+            </p>
           </fieldset>
 
-          <div className="d-grid gap-2 col-3 mx-auto" id="btn">
+          <div className="esqueceu-senha" id="esqueceu-senha">
+            <a href="#">Esqueceu a senha?</a>
+          </div>
 
-            <input value="Entrar" type="submit" style={{ backgroundColor: "#014B7B" }} />
-            
+          <div className="d-grid gap-2 col-4 mt-2 mx-auto" id="btn">
+            <input
+              value="Acessar"
+              type="submit"
+              style={{ backgroundColor: "#014B7B" }}
+            />
           </div>
         </form>
       </div>
