@@ -1,12 +1,12 @@
 import Login from "../components/Login";
-import HeaderNav from "../components/HeaderNav";
-import BuscaDados from "../components/BuscaMedicamentoFarmacia";
+import HeaderLogin from "../components/HeaderLogin";
+import BuscaMedicamentoFarmacia from "../components/BuscaMedicamentoFarmacia";
 export default function LoginPage() {
   
   return (
     <>
-    <BuscaDados/>
-    <HeaderNav/>
+    <BuscaMedicamentoFarmacia/>
+    <HeaderLogin/>
     <Login />
     </>
   );

@@ -1,9 +1,8 @@
 import { createContext, useContext, useState } from "react";
 const DadosFarmaciaContext = createContext();
 const DadosFarmaciaProvider = ({ children }) => {
+  const [dadosCep, setDadosCep] = useState("");
 
-  const [cepInformado, setCepInformado] = useState("");
- 
   const [latLng, setLatLng] = useState({
     latitude: "",
     longitude: "",
@@ -11,8 +10,8 @@ const DadosFarmaciaProvider = ({ children }) => {
   return (
     <DadosFarmaciaContext.Provider
       value={{
-        cepInformado,
-        setCepInformado,
+        dadosCep,
+        setDadosCep,
         latLng,
         setLatLng,
       }}

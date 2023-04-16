@@ -5,6 +5,7 @@ import Mapa from "../pages/Mapa";
 import CadastroPharm from "../pages/CadastroPharm";
 import CadastroMed from "../pages/CadastroMed";
 import ListaMedicamentos from "../pages/ListaMedicamentos";
+import FAQ from "../pages/FaqPage";
 
 export default function Rotas() {
   return (
@@ -23,6 +24,7 @@ export default function Rotas() {
         <Route path="/" element={<LoginPage />} />
         <Route path="/home" element={<Navigate replace to="/" />} />
         <Route path="/login" element={<Navigate replace to="/" />} />
+        <Route path="/FAQ" element={<FAQ />} />
         
       </Routes>
     </BrowserRouter>

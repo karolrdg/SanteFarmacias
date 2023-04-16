@@ -21,28 +21,28 @@ export default function Login() {
           }}
           style={{ backgroundColor: "#EEF4FF" }}
         >
-          <div className="mb-3">
-            <h5>Faça o Login para acessar o site</h5>
+          <div className="mb-3 text-center">
+            <h5>Faça o Login para acessar Central System da Santé Farma</h5>
           </div>
-          <fieldset className="mb-3" id="border">
+          <fieldset className="mb-3 text-center" id="border">
             <label htmlFor="inputEmail" className="form-label">
               E-mail
             </label>
             <input
               type="email"
-              className="form-control"
+              className="form-control text-center"
               id="inputEmail"
               required
               placeholder="Digite o seu melhor e-mail"
             />
           </fieldset>
-          <fieldset className="mb-3" id="border">
+          <fieldset className="mb-3 text-center" id="border">
             <label htmlFor="inputSenha" className="form-label ">
               Senha
             </label>
             <input
               type="password"
-              className="form-control"
+              className="form-control text-center"
               id="inputSenha"
               required
               placeholder="Digite a sua senha"
@@ -68,7 +68,7 @@ export default function Login() {
             </p>
           </fieldset>
 
-          <div className="esqueceu-senha" id="esqueceu-senha">
+          <div className="esqueceu-senha text-center" id="esqueceu-senha">
             <a href="#">Esqueceu a senha?</a>
           </div>
 

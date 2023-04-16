@@ -12,8 +12,8 @@ export default function HeaderNav() {
           className="navbar-brand"
           id="logo-name"
           to={"/home"}
-          activeclassname="active-link">
-        
+          activeclassname="active-link"
+        >
           <img
             src={logo}
             alt=""
@@ -21,7 +21,8 @@ export default function HeaderNav() {
             height="44"
             className="d-inline-block align-text-center"
           />
-          <b id="space">SANTÉ FARMA</b>
+          <b id="nome-farma">SANTÉ FARMA</b>
+          <span id="nome-lab">by LABPharmacy Inc - Central System </span>
         </NavLink>
         <button
           className="navbar-toggler"
@@ -31,12 +32,13 @@ export default function HeaderNav() {
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon" id="hamburguer" ></span>
         </button>
-        <div className="d-flex justify-content-end">
+        <div className="d-flex justify-content-end"  >
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 " id="responsive-menu">
               <li key="cadastra-farmacia" className="nav-item">
                 <NavLink
                   className="nav-link"
@@ -70,26 +72,25 @@ export default function HeaderNav() {
                   Lista de Medicamentos
                 </NavLink>
               </li>
-              <li key="perguntas-freq" className="nav-item">
+              <li key="faq" className="nav-item">
                 <NavLink
                   className="nav-link"
                   type="button"
-                  to={"/ajuda"}
+                  to={"/FAQ"}
                   activeclassname="active-link"
-                  id="nav-list"
+                  id="FAQ"
                 >
-                  Ajuda
+                  FAQ
                 </NavLink>
               </li>
               <li key="mapa" className="nav-item">
                 <NavLink
-                  className="nav-link btn btn-sm btn-dark border-0 rounded-5 pe-3"
                   type="button"
                   to={"/mapa"}
                   activeclassname="active-link"
-                  id="nav-list"
+                  id="mapa"
                 >
-                   Mapa
+                  Mapa
                 </NavLink>
               </li>
             </ul>

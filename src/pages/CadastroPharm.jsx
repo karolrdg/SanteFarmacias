@@ -3,8 +3,7 @@ import { useDadosFarmacia } from "../contexts/useDadosFarmacia";
 import HeaderNav from "../components/HeaderNav";
 import CadastroFarmacia from "../components/CadastroFarmacia";
 export default function CadastroPharm() {
-  const { cepInformado, setCepInformado, latLng, setLatLng } =
-    useDadosFarmacia();
+  const { dadosCep, setDadosCep, latLng, setLatLng } = useDadosFarmacia();
 
   const [respostaCep, setRespostaCep] = useState({
     logradouro: "",
@@ -14,8 +13,8 @@ export default function CadastroPharm() {
   });
 
   useEffect(() => {
-    if (cepInformado.length === 8) {
-      fetch(`https://viacep.com.br/ws/${cepInformado}/json/`, { method: "GET" })
+    if (dadosCep.length === 8) {
+      fetch(`https://viacep.com.br/ws/${dadosCep}/json/`, { method: "GET" })
         .then((respostaInicial) => {
           return respostaInicial.json();
         })
@@ -28,7 +27,7 @@ export default function CadastroPharm() {
           });
           if (infoDoCEP.erro) {
             alert(
-              `ATENÇÃO: evise o campo: "CEP". (Ele deve conter 8 dígitos, apenas números)`
+              `Aviso: Para realizar o preenchimento automático dos dados de endereço com base no CEP fornecido, é necessário verificar se o campo "CEP" está correto e contém 8 dígitos numéricos.`
             );
             setRespostaCep({
               logradouro: "",
@@ -39,7 +38,7 @@ export default function CadastroPharm() {
           }
         });
     }
-  }, [cepInformado]);
+  }, [dadosCep]);
 
   useEffect(() => {
     fetch(
@@ -61,7 +60,7 @@ export default function CadastroPharm() {
             longitude: "",
           });
         }
-        setCepInformado("");
+        setDadosCep("");
       });
   }, [respostaCep]);
 
@@ -79,5 +78,3 @@ export default function CadastroPharm() {
     </>
   );
 }
-
-

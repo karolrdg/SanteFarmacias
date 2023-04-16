@@ -8,7 +8,7 @@ export default function CadastroFarmacia({
   lat,
   lng,
 }) {
-  const { cepInformado, setCepInformado } = useDadosFarmacia();
+  const { dadosCep, setDadosCep } = useDadosFarmacia();
   const [farmacia, setFarmacia] = useState({});
   let listaFarmacias = JSON.parse(localStorage.getItem("ListaFarmacias"));
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function CadastroFarmacia({
       latitude: lat,
       longitude: lng,
     });
-  }, [cepInformado, bairro, localidade, logradouro, uf, lat, lng]);
+  }, [dadosCep, bairro, localidade, logradouro, uf, lat, lng]);
   
   function armazenaFarmacia() {
     setFarmacia({
@@ -32,7 +32,7 @@ export default function CadastroFarmacia({
     listaFarmacias.push(farmacia);
     localStorage.setItem("ListaFarmacias", JSON.stringify(listaFarmacias));
     document.getElementById("reset").click();
-    alert(`Farmácia adastrada com sucesso!`);
+    alert(`Farmácia cadastrada com sucesso!`);
   }
 
   return (
@@ -125,7 +125,7 @@ export default function CadastroFarmacia({
               type="number"
               className="form-control"
               id="inputTelefone"
-              placeholder="(99) 9999-9999"
+              placeholder="(00) 9.00000000"
               onChange={(e) =>
                 setFarmacia({ ...farmacia, telefone: e.target.value })
               }
@@ -140,7 +140,7 @@ export default function CadastroFarmacia({
               type="number"
               className="form-control"
               id="inputCelular"
-              placeholder="(99) 9.9999-9999"
+              placeholder="(00) 9.00000000"
               required
               onChange={(e) =>
                 setFarmacia({ ...farmacia, celular: e.target.value })
@@ -155,10 +155,10 @@ export default function CadastroFarmacia({
               type="number"
               className="form-control"
               id="inputCEP"
-              placeholder="Apenas números (8)"
+              placeholder="00000000"
               pattern="^(?=.*[0-9])[0-9]{8}$"
               required
-              onChange={(e) => setCepInformado(e.target.value)}
+              onChange={(e) => setDadosCep(e.target.value)}
             />
           </fieldset>
           <fieldset className="col-md-8 col-lg-6">
@@ -250,7 +250,7 @@ export default function CadastroFarmacia({
               type="text"
               className="form-control"
               id="inputComplemento"
-              placeholder="Próximo do que? (Escola, Igreja tal etc"
+              placeholder="Próximo do que? (Escola, Igreja tal etc)"
               onChange={(e) =>
                 setFarmacia({ ...farmacia, complemento: e.target.value })
               }
