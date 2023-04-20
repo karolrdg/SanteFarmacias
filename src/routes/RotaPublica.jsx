@@ -7,7 +7,7 @@ import CadastroMed from "../pages/CadastroMed";
 import ListaMedicamentos from "../pages/ListaMedicamentos";
 import FAQ from "../pages/FaqPage";
 
-export default function Rotas() {
+export default function RotaPublica() {
   return (
     <BrowserRouter>
       <Routes>

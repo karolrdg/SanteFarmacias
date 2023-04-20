@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function CadastroMedicamento() {
+export default function CadastroNovoMedicamento() {
 
   const [medicamento, setMedicamento] = useState({
     id: Math.random(),
@@ -96,15 +96,19 @@ export default function CadastroMedicamento() {
               Tipo de medicamento
             </label>
             <select
+            
               id="inputTipo"
               className="form-select"
               aria-label="Selecione o tipo do medicamento"
               required
               onChange={(e) =>
                 setMedicamento({ ...medicamento, tipo: e.target.value })
+                
               }
+              
             >
-              <option defaultValue></option>
+              
+              <option selected>Selecione</option>
               <option value="Medicamento controlado">
                 Medicamento controlado
               </option>
@@ -120,7 +124,7 @@ export default function CadastroMedicamento() {
               className="form-control"
               id="inputDescricao"
               rows="5"
-              maxLength={870}
+              maxLength={700}
               onChange={(e) =>
                 setMedicamento({ ...medicamento, descricao: e.target.value })
               }
@@ -145,7 +149,7 @@ export default function CadastroMedicamento() {
               }}
             />
             <input
-              value="Cadastrar"
+              value="Salvar"
               type="submit"
               style={{ backgroundColor: "#014B7B" }}
             />

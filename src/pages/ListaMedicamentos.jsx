@@ -1,9 +1,17 @@
 import HeaderNav from "../components/HeaderNav";
 import CardMedicamento from "../components/CardMedicamento";
 import { useState, useEffect } from "react";
+import caixaMed from "../img/caixa-medicamento.png";
 export default function ListaMedicamentos() {
   
-  let listaMedicamentos = JSON.parse(localStorage.getItem("ListaMedicamentos"));
+  let listaMedicamentos;
+
+  try {
+    listaMedicamentos = JSON.parse(localStorage.getItem("ListaMedicamentos"));
+  } catch (error) {
+    console.error("Error parsing ListaMedicamentos from localStorage:", error);
+  }
+  
   
   const [listaAnterior, setListaAnterior] = useState(JSON.parse(localStorage.getItem("ListaMedicamentos")))
   let novaLista;
@@ -56,7 +64,7 @@ export default function ListaMedicamentos() {
               aria-describedby="inputGroup-sizing-sm"
               value={termo}
               onChange={(e) => setTermo(e.target.value)}
-              placeholder="Pesquise o nome do medicamento"
+              placeholder="Busca medicamento"
             ></input>
           </div>
           <div className="row g-3 mb-5">
@@ -72,10 +80,12 @@ export default function ListaMedicamentos() {
                   tipo={item.tipo}
                   laboratorio={item.laboratorio}
                   id={item.id}
+                 
                 />
               );
             })}
             {filtrado.length === 0 ? <div>Não encontrado.</div>: null}
+        
           </div>
         </div>
       </div>

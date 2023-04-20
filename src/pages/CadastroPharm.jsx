@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDadosFarmacia } from "../contexts/useDadosFarmacia";
 import HeaderNav from "../components/HeaderNav";
-import CadastroFarmacia from "../components/CadastroFarmacia";
+import CadastroNovaFarmacia from "../components/CadastroNovaFarmacia";
 export default function CadastroPharm() {
   const { dadosCep, setDadosCep, latLng, setLatLng } = useDadosFarmacia();
 
@@ -67,7 +67,7 @@ export default function CadastroPharm() {
   return (
     <>
       <HeaderNav />
-      <CadastroFarmacia
+      <CadastroNovaFarmacia
         logradouro={respostaCep.logradouro}
         localidade={respostaCep.localidade}
         bairro={respostaCep.bairro}

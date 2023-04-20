@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useDadosFarmacia } from "../contexts/useDadosFarmacia";
-export default function CadastroFarmacia({
+export default function CadastroNovaFarmacia({
   logradouro,
   localidade,
   bairro,
@@ -23,7 +23,7 @@ export default function CadastroFarmacia({
       longitude: lng,
     });
   }, [dadosCep, bairro, localidade, logradouro, uf, lat, lng]);
-  
+
   function armazenaFarmacia() {
     setFarmacia({
       ...farmacia,
@@ -147,7 +147,7 @@ export default function CadastroFarmacia({
               }
             />
           </fieldset>
-          <fieldset className="col-md-2 col-lg-3">
+          <fieldset className="col-md-2 col-lg-3" id="diminuir-cep">
             <label htmlFor="inputCEP" className="form-label">
               CEP
             </label>
@@ -177,7 +177,7 @@ export default function CadastroFarmacia({
               }
             />
           </fieldset>
-          <fieldset className="col-md-2 col-lg-3">
+          <fieldset className="col-md-2 col-lg-3" id="diminuir-input">
             <label htmlFor="inputCelular" className="form-label">
               Número
             </label>
@@ -225,10 +225,11 @@ export default function CadastroFarmacia({
               }
             />
           </fieldset>
-          <fieldset className="col-md-6 col-lg-4">
+          <fieldset className="col-md-6 col-lg-4" id="diminuir-input">
             <label htmlFor="inputEstado" className="form-label">
               Estado
             </label>
+            
             <input
               value={farmacia.estado || ""}
               type="text"
@@ -288,7 +289,10 @@ export default function CadastroFarmacia({
               }
             />
           </fieldset>
-          <div className="d-grid gap-1 d-md-flex justify-content-md-end" id="btn">
+          <div
+            className="d-grid gap-1 d-md-flex justify-content-md-end"
+            id="btn"
+          >
             <input
               id="reset"
               value="Limpar"
@@ -306,7 +310,7 @@ export default function CadastroFarmacia({
               }}
             />
             <input
-              value="Cadastrar"
+              value="Salvar"
               type="submit"
               style={{ backgroundColor: "#014B7B" }}
             />

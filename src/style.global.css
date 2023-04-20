@@ -15,6 +15,11 @@ a {
   border: none;
 }
 
+#border ::placeholder{
+  color: #8c9499;
+  font-weight: 200;
+}
+
 #nome-farma {
   color: #ffffff;
   margin-left: 4px;
@@ -146,6 +151,20 @@ input {
   margin-bottom: 5px;
 }
 
-#img span{
-  background-image: url(src/img/logo-pha.png);
+
+#diminuir-input input{
+  width: 70px;
+  text-align: center;
+}
+
+#diminuir-cep {
+  width: 170px;
+}
+
+.modal-dialog {
+  color: #535353;
+}
+
+#caixa-medicamento img {
+  width: 120px;
 }

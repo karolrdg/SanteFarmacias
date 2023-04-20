@@ -1,4 +1,4 @@
-import { Navigate, Outlet } from "react-router-dom";
+import { Outlet, Navigate } from "react-router-dom";
 import { useLogin } from "../contexts/useLogin";
 
 export function RotaPrivada() {

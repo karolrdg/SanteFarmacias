@@ -4,9 +4,9 @@ export default function BuscaMedicamentoFarmacia() {
       id: Math.random(),
       razao: "PANVEL SANTA CATARINA DROGARIAS E FARMACIAS LTDA",
       cnpj: "79011599000208 ",
-      nome: "PANVEL",
+      nomeFantasia: "PANVEL",
       email: "teste@teste.com",
-      telefone: "	+554832326813",
+      whatsapp: 489135788,
       celular: "	+554832326813",
       cep: "88032001",
       logradouro: " Rodovia Virgílio Várzea",
@@ -23,7 +23,7 @@ export default function BuscaMedicamentoFarmacia() {
       id: Math.random(),
       razao: "PANVEL SANTA CATARINA DROGARIAS E FARMACIAS LTDA",
       cnpj: "79011599000208 ",
-      nome: "PANVEL",
+      nomeFantasia: "PANVEL",
       email: "teste@teste.com",
       telefone: "	+554832326813",
       celular: "	+554832326813",
@@ -47,7 +47,7 @@ export default function BuscaMedicamentoFarmacia() {
       laboratorio: "EMS",
       tipo: "Medicamento comum",
       descricao:
-        "Ácido acetilsalicilico 100mg Genérico EMS é utilizado em manifestações dolorosas e febre. Pode ser utilizado para o alívio sintomático da cefaléia, odontalgia, dor de garganta, dismenorréia, mialgia ou artralgia, lombalgia e dor artrítica de pequena intensidade. No resfriado comum ou na gripe, para o alívio sintomático da dor e da febre. O medicamento está contra-indicado a pacientes com doenças no estômago, fígado e rins. Não deve ser usado em hemofílicos e naqueles pacientes que estejam fazendo uso de anticoagulantes.",
+        "Ácido acetilsalicilico 100mg Genérico EMS é utilizado em manifestações dolorosas e febre. Pode ser utilizado para o alívio sintomático da cefaléia, odontalgia, dor de garganta, dismenorréia, mialgia ou artralgia, lombalgia e dor artrítica de pequena intensidade.",
       preco: "9,23",
     },
 
@@ -58,7 +58,7 @@ export default function BuscaMedicamentoFarmacia() {
       laboratorio: "EMS",
       tipo: "Medicamento comum",
       descricao:
-        "Ácido acetisalicilico 100mg Genérico EMS é utilizado em manifestações dolorosas e febre. Pode ser utilizado para o alívio sintomático da cefaléia, odontalgia, dor de garganta, dismenorréia, mialgia ou artralgia, lombalgia e dor artrítica de pequena intensidade. No resfriado comum ou na gripe, para o alívio sintomático da dor e da febre. O medicamento está contra-indicado a pacientes com doenças no estômago, fígado e rins. Não deve ser usado em hemofílicos e naqueles pacientes que estejam fazendo uso de anticoagulantes.",
+        "Ácido acetisalicilico 100mg Genérico EMS é utilizado em manifestações dolorosas e febre. Pode ser utilizado para o alívio sintomático da cefaléia, odontalgia, dor de garganta, dismenorréia, mialgia ou artralgia, lombalgia e dor artrítica de pequena intensidade.",
       preco: "2,4",
     },
   ];
