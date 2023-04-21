@@ -1,5 +1,10 @@
 --Projeto nomeado como Santé Farmacias by LABPharmacy Inc
 
+*****SUGESTÃO DE LOGIN PARA ACESSO AO SISTEMA:
+teste@email.com
+SENHASENHA1
+OBS: PRECISA 8 CARACTERES + UM NÚMERO + LETRA MAIÚSCULA.
+
 Criação de um sistema online, para gerenciamento de medicamentos e farmácias codificado em React.
 
 Tecnologias usadas: HTML, CSS, JS/REACT, Bootstrap...
