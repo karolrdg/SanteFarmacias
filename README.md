@@ -5,6 +5,8 @@ teste@email.com
 SENHASENHA1
 OBS: PRECISA 8 CARACTERES + UM NÚMERO + LETRA MAIÚSCULA.
 
+LINK UPADO NO VERCEL PARA ACESSO: https://sante-farmacias.vercel.app/
+
 Criação de um sistema online, para gerenciamento de medicamentos e farmácias codificado em React.
 
 Tecnologias usadas: HTML, CSS, JS/REACT, Bootstrap...
