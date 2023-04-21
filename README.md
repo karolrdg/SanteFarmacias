@@ -12,5 +12,6 @@ Tecnologias usadas: HTML, CSS, JS/REACT, Bootstrap...
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
+    "react-imask": "^6.6.0",
     "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.10.0"
