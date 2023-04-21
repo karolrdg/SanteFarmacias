@@ -56,7 +56,7 @@ export default function Login() {
               <b>Sua senha deve conter:</b>
             </span>
             <br />
-            <p>{senha.length >= 12 ? "✔️" : ""}Pelo menos 8 caracteres</p>
+            <p>{senha.length >= 8 ? "✔️" : ""}Pelo menos 8 caracteres</p>
 
             <p>
               {senha.search(/[0-9]/) !== -1 ? "✔️" : ""}Pelo menos um número
