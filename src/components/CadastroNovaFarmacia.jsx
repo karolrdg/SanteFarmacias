@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useDadosFarmacia } from "../contexts/useDadosFarmacia";
+import { IMaskInput } from "react-imask";
+import Form from "react-bootstrap/Form";
 export default function CadastroNovaFarmacia({
   logradouro,
   localidade,
@@ -40,7 +42,7 @@ export default function CadastroNovaFarmacia({
       className="container"
       onLoad={() => document.getElementById("reset").click()}
     >
-      <div className="row justify-content-center" id="border">
+      <div className="row justify-content-center " id="border">
         <form
           autoComplete="off"
           className="row g-3 mt-5 ps-4 pe-4 pt-5"
@@ -50,8 +52,8 @@ export default function CadastroNovaFarmacia({
           }}
           style={{ backgroundColor: "#EEF4FF" }}
         >
-          <h4>Cadastro Farmácia</h4>
-          <fieldset className="col-md-6 col-lg-4">
+          <h4 className="text-center">Cadastro Farmácia</h4>
+          <fieldset className="col-md-6 col-lg-4 ">
             <label htmlFor="inputRazaoSocial" className="form-label">
               Razão Social
             </label>
@@ -71,14 +73,16 @@ export default function CadastroNovaFarmacia({
             <label htmlFor="inputCNPJ" className="form-label">
               CNPJ
             </label>
-            <input
+
+            <Form.Control
               value={farmacia.cnpj || ""}
               type="text"
               className="form-control"
               id="inputCNPJ"
-              placeholder="00.000.000/0000-00"
+              as={IMaskInput}
+              mask="00.000.000/0000-00"
+              placeholder="Digite seu CNPJ"
               required
-              minLength={14}
               onChange={(e) =>
                 setFarmacia({ ...farmacia, cnpj: e.target.value })
               }
@@ -93,7 +97,7 @@ export default function CadastroNovaFarmacia({
               type="text"
               className="form-control"
               id="inputNomeFantasia"
-              placeholder="Informe o nome fantasia"
+              placeholder="Digite o nome fantasia"
               required
               onChange={(e) =>
                 setFarmacia({ ...farmacia, nome: e.target.value })
@@ -109,7 +113,7 @@ export default function CadastroNovaFarmacia({
               type="email"
               className="form-control"
               id="inputEmail"
-              placeholder="email@email.com"
+              placeholder="email@exemplo.com"
               required
               onChange={(e) =>
                 setFarmacia({ ...farmacia, email: e.target.value })
@@ -120,12 +124,15 @@ export default function CadastroNovaFarmacia({
             <label htmlFor="inputTelefone" className="form-label">
               Telefone
             </label>
-            <input
+
+            <Form.Control
               value={farmacia.telefone || ""}
               type="number"
               className="form-control"
               id="inputTelefone"
-              placeholder="(00) 9.00000000"
+              as={IMaskInput}
+              mask="00000000000"
+              placeholder="Digite seu telefone"
               onChange={(e) =>
                 setFarmacia({ ...farmacia, telefone: e.target.value })
               }
@@ -135,12 +142,15 @@ export default function CadastroNovaFarmacia({
             <label htmlFor="inputCelular" className="form-label">
               Celular
             </label>
-            <input
+
+            <Form.Control
               value={farmacia.celular || ""}
               type="number"
               className="form-control"
               id="inputCelular"
-              placeholder="(00) 9.00000000"
+              as={IMaskInput}
+              mask="00000000000"
+              placeholder="Digite seu celular"
               required
               onChange={(e) =>
                 setFarmacia({ ...farmacia, celular: e.target.value })
@@ -151,11 +161,14 @@ export default function CadastroNovaFarmacia({
             <label htmlFor="inputCEP" className="form-label">
               CEP
             </label>
-            <input
+
+            <Form.Control
               type="number"
               className="form-control"
               id="inputCEP"
-              placeholder="00000000"
+              as={IMaskInput}
+              mask="00000000"
+              placeholder="Digite seu CEP"
               pattern="^(?=.*[0-9])[0-9]{8}$"
               required
               onChange={(e) => setDadosCep(e.target.value)}
@@ -170,7 +183,7 @@ export default function CadastroNovaFarmacia({
               type="phone"
               className="form-control"
               id="inputTelefone"
-              placeholder="Rua, Avenida..."
+              placeholder="Digite o nome da rua, avenida, rodovia..."
               required
               onChange={(e) =>
                 setFarmacia({ ...farmacia, logradouro: e.target.value })
@@ -178,14 +191,14 @@ export default function CadastroNovaFarmacia({
             />
           </fieldset>
           <fieldset className="col-md-2 col-lg-3" id="diminuir-input">
-            <label htmlFor="inputCelular" className="form-label">
+            <label htmlFor="inputNumero" className="form-label">
               Número
             </label>
             <input
               value={farmacia.numero || ""}
               type="phone"
               className="form-control"
-              id="inputCelular"
+              id="inputNumero"
               placeholder="0000"
               required
               onChange={(e) =>
@@ -202,7 +215,7 @@ export default function CadastroNovaFarmacia({
               type="text"
               className="form-control"
               id="inputBairro"
-              placeholder="Informe o bairro"
+              placeholder="Digite o bairro"
               required
               onChange={(e) =>
                 setFarmacia({ ...farmacia, bairro: e.target.value })
@@ -218,7 +231,7 @@ export default function CadastroNovaFarmacia({
               type="text"
               className="form-control"
               id="inputCidade"
-              placeholder="Informe a cidade"
+              placeholder="Digite a cidade"
               required
               onChange={(e) =>
                 setFarmacia({ ...farmacia, cidade: e.target.value })
@@ -229,13 +242,12 @@ export default function CadastroNovaFarmacia({
             <label htmlFor="inputEstado" className="form-label">
               Estado
             </label>
-            
+
             <input
               value={farmacia.estado || ""}
               type="text"
               className="form-control"
               id="inputEstado"
-              placeholder="Informe o estado"
               required
               onChange={(e) =>
                 setFarmacia({ ...farmacia, estado: e.target.value })
@@ -266,7 +278,7 @@ export default function CadastroNovaFarmacia({
               type="text"
               className="form-control"
               id="inputLatitude"
-              placeholder="Informe a latitude"
+              placeholder="Digite a latitude"
               required
               onChange={(e) =>
                 setFarmacia({ ...farmacia, latitude: e.target.value })
@@ -282,7 +294,7 @@ export default function CadastroNovaFarmacia({
               type="text"
               className="form-control"
               id="inputLongitude"
-              placeholder="Informe a longitude"
+              placeholder="Digite a longitude"
               required
               onChange={(e) =>
                 setFarmacia({ ...farmacia, longitude: e.target.value })

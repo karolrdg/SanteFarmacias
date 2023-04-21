@@ -55,12 +55,12 @@ export default function ListaMedicamentos() {
   return (
     <>
       <HeaderNav />
-      <div className="container">
-        <div className="row g-3 ps-4 pe-4 pt-5">
-          <div className="col-lg-5 col-md-12 mt-5">
-            <h4 className="pt-4 mb-0 mt-2">Lista de Medicamentos</h4>
+      <div className="container ">
+        <div className="row g-3 ps-3 pe-2 pt-5 row d-flex justify-content-center">
+          <div className="col-lg-5 col-md-12 mt-5 ">
+            <h4 className="pt-4 mb-3 mt-2 row d-flex justify-content-center  ">Confira o estoque</h4>
             <input
-              className="form-control mt-3"
+              className="form-control mt-3 text-center "
               aria-describedby="inputGroup-sizing-sm"
               value={termo}
               onChange={(e) => setTermo(e.target.value)}

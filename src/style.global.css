@@ -15,7 +15,7 @@ a {
   border: none;
 }
 
-#border ::placeholder{
+#border ::placeholder {
   color: #8c9499;
   font-weight: 200;
 }
@@ -152,7 +152,7 @@ input {
 }
 
 
-#diminuir-input input{
+#diminuir-input input {
   width: 70px;
   text-align: center;
 }
@@ -167,4 +167,10 @@ input {
 
 #caixa-medicamento img {
   width: 120px;
+}
+
+#card {
+  box-shadow: 0px 4px 15px rgb(0 0 0 / 30%);
+  border: none;
+  border-radius: 5px;
 }

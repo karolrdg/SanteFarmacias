@@ -26,7 +26,7 @@ export default function CadastroNovoMedicamento() {
           onSubmit={armazenaMedicamento}
           style={{ backgroundColor: "#EBF2FF" }}
         >
-          <h4>Cadastro Medicamento</h4>
+          <h4 className="text-center">Cadastro Medicamento</h4>
           <fieldset className="col-md-6">
             <label htmlFor="inputMedicamento" className="form-label">
               Medicamento

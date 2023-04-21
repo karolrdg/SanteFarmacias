@@ -47,7 +47,7 @@ export default function HeaderNav() {
                   activeclassname="active-link"
                   id="nav-list"
                 >
-                  Cadastro de Novas Farmácias
+                  CADASTRO DE FARMÁCIA
                 </NavLink>
               </li>
               <li key="cadastra-medicamento" className="nav-item">
@@ -58,7 +58,7 @@ export default function HeaderNav() {
                   activeclassname="active-link"
                   id="nav-list"
                 >
-                  Cadastro de Medicamentos
+                  CADASTRO DE MEDICAMENTO
                 </NavLink>
               </li>
               <li key="lista-medicamentos" className="nav-item">
@@ -69,7 +69,7 @@ export default function HeaderNav() {
                   activeclassname="active-link"
                   id="nav-list"
                 >
-                  Lista de Medicamentos
+                  ESTOQUE MEDICAMENTO
                 </NavLink>
               </li>
               <li key="faq" className="nav-item">

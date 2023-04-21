@@ -12,7 +12,7 @@ export default function Login() {
     <div className="container">
       <div className="row justify-content-center align-items-center vh-100">
         <form
-          autoComplete="off"
+          autoComplete="on"
           className="col-lg-4 col-md-8 p-4 rounded-3"
           onSubmit={(e) => {
             e.preventDefault();

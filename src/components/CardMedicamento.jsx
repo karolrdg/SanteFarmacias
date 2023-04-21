@@ -14,9 +14,9 @@ export default function CardMedicamento({
 
   return (
     <div className="col-lg-4 col-md-6 col-sm-12">
-      <div className="card">
+      <div className="card" id="card">
         <div
-          className="card-body"
+          className="card-body text-center" 
           data-bs-toggle="modal"
           data-bs-target={`#a${novoId.substring(2, 13)}`}
           style={{ backgroundColor: "#ffffff" }}
@@ -26,7 +26,7 @@ export default function CardMedicamento({
           <p className="card-text">
             {descricao ? descricao.substring(0, 57) : null}..
           </p>
-          <div className="d-grid col-5 mx-auto">
+          <div className="d-grid col-5 mx-auto ">
             <button className="btn-list-med ">Informações</button>
           </div>
         </div>
