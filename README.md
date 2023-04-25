@@ -22,3 +22,10 @@ Tecnologias usadas: HTML, CSS, JS/REACT, Bootstrap...
     "react-imask": "^6.6.0",
     "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.10.0"
+    
+    *Imagem utilizada no logo baixada em: https://pngtree.com/freepng/pharmacy-medical-logo-natural-mortar-and-pestle-logo_3633421.html
+    *Imagem utilizada como amostra de caixa de medicamento: https://www.seekpng.com/ima/u2e6q8o0y3w7u2y3/
+    
+    
+
+(✿◠‿◠) 
