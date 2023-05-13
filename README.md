@@ -1,3 +1,6 @@
+![Logo](https://raw.githubusercontent.com/karolrdg/SanteFarmacias/main/sante_proj_pic.jpg?token=GHSAT0AAAAAAB5IV2F4ADRJPGKNY5UUUFIEZC636OA)
+
+
 --Projeto nomeado como Santé Farmacias by LABPharmacy Inc
 
 *****SUGESTÃO DE LOGIN PARA ACESSO AO SISTEMA:
