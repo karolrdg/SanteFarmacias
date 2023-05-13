@@ -1,4 +1,4 @@
-![Logo](https://raw.githubusercontent.com/karolrdg/SanteFarmacias/main/sante_proj_pic.jpg?token=GHSAT0AAAAAAB5IV2F4ADRJPGKNY5UUUFIEZC636OA)
+![Logo](https://github.com/karolrdg/SanteFarmacias/blob/main/sante_proj_pic.jpg?raw=true)
 
 
 # PROJETO AVALIATIVO
