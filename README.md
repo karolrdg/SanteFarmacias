@@ -34,8 +34,9 @@ OBS: PRECISA 8 CARACTERES + UM NÚMERO + LETRA MAIÚSCULA.
 
 
     
-    *Imagem utilizada no logo baixada em: https://pngtree.com/freepng/pharmacy-medical-logo-natural-mortar-and-pestle-logo_3633421.html
-    *Imagem utilizada como amostra de caixa de medicamento: https://www.seekpng.com/ima/u2e6q8o0y3w7u2y3/
+ *Imagem utilizada no logo baixada em: https://pngtree.com/freepng/pharmacy-medical-logo-natural-mortar-and-pestle-logo_3633421.html
+ 
+ *Imagem utilizada como amostra de caixa de medicamento: https://www.seekpng.com/ima/u2e6q8o0y3w7u2y3/
     
     
 
